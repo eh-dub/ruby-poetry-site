@@ -1,0 +1,22 @@
+%h1 Post Titles
+%table
+	%td
+		%th Title
+		%th Author
+		%th Permalink
+		%th Subreddit
+		%th Created_UTC
+		%th Upvotes
+		%th Downvotes
+		%th Rhyme Keys
+	-@posts.each do |post|
+		%tr
+			%td= post.title
+			%td= post.author
+			%td= post.permalink
+			%td= post.subreddit
+			%td= post.created_utc
+			%td= post.upvotes
+			%td= post.downvotes
+			%td= post.rhyme_keys
+		
