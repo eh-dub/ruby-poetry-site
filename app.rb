@@ -32,16 +32,21 @@ end
 
 get '/limericks' do
 	@max = Rhyme_Key.count
-	# x = Rhyme_Key.count
-	# a_key_id = 1 + Random.rand(x)
-	# b_key_id = a_key_id
+	x = Rhyme_Key.count
 
-	# while (a_key_id == b_key_id) do 
-	# 	b = 1 + Random.rand(x)
-	# end
+	a_key_id = 1 + Random.rand(x)
+	@a_key_id_num = a_key_id
+	
+	b_key_id = a_key_id
+	
 
-	# @a_key = Rhyme_Key.find(a_key_id)
-	# # b_key = Rhyme_Key.find(b_key_id)
+	while (a_key_id == b_key_id) do 
+		b_key_id = 1 + Random.rand(x)
+	end
+	@b_key_id_num = b_key_id
+
+	@a_key = Rhyme_Key.find(a_key_id)
+	@b_key = Rhyme_Key.find(b_key_id)
 	# # a_posts = Post.where(rhyme_key => a_key).shuffle
 	# # b_posts = Post.where(rhyme_key => b_key).shuffle
 	# # @a1 = a_posts.at(0)
