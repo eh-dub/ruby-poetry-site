@@ -8,7 +8,7 @@ class Posts < ActiveRecord::Migration
   		t.string :created_utc
   		t.integer :upvotes
   		t.integer :downvotes
-  		t.string :rhyme_keys
+  		t.string :rhyme_key
   	end	
   	add_index :posts, :title
   end
