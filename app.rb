@@ -18,7 +18,7 @@ def generate_limerick
 end
 
 get '/' do 
-	
+	'hi'
 end
 
 post '/' do
@@ -30,17 +30,17 @@ get '/p' do
 	haml :posts
 end
 
-get '/limerick' do
+get '/limericks' do
 	@max = Rhyme_Key.count
-	x = Rhyme_Key.count
-	a_key_id = 1 + Random.rand(x)
+	# x = Rhyme_Key.count
+	# a_key_id = 1 + Random.rand(x)
 	# b_key_id = a_key_id
 
 	# while (a_key_id == b_key_id) do 
 	# 	b = 1 + Random.rand(x)
 	# end
 
-	@a_key = Rhyme_Key.find(a_key_id)
+	# @a_key = Rhyme_Key.find(a_key_id)
 	# # b_key = Rhyme_Key.find(b_key_id)
 	# # a_posts = Post.where(rhyme_key => a_key).shuffle
 	# # b_posts = Post.where(rhyme_key => b_key).shuffle
